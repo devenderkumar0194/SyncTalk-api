@@ -33,7 +33,7 @@ async function bootstrap() {
     .setVersion('1.0')
     .addBearerAuth({ type: 'http', name: 'authorization', in: 'header' }, 'authorization')
     .addServer(`http://localhost:${process.env.PORT}/`, 'Local Server')
-    .addServer(`https://api.nprajpur.in/`, 'Dev Server')
+    .addServer(`https://synctalk-api.onrender.com/`, 'Live Server')
     .build();
   const document = SwaggerModule.createDocument(app, config);
 
