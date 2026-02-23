@@ -32,7 +32,7 @@ async function bootstrap() {
     .setDescription('SyncTalk API description')
     .setVersion('1.0')
     .addBearerAuth({ type: 'http', name: 'authorization', in: 'header' }, 'authorization')
-    .addServer(`http://localhost:${process.env.APP_PORT}/`, 'Local Server')
+    .addServer(`http://localhost:${process.env.PORT}/`, 'Local Server')
     .addServer(`https://api.nprajpur.in/`, 'Dev Server')
     .build();
   const document = SwaggerModule.createDocument(app, config);
